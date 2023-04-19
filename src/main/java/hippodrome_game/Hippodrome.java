@@ -25,4 +25,35 @@ public class Hippodrome {
     }
 
     static Hippodrome game;
+
+    public void run() throws InterruptedException {
+        for (int i = 0; i < 100; i++) {
+            move();
+            print();
+            Thread.sleep(200);
+        }
+    }
+//В методе move класса Hippodrome
+// должен быть вызван метод move(Horse) по одному разу для каждой лошади(каждого элемента списка horses).
+    public void move() {
+        for (int i = 0; i < horses.size(); i++) {
+            horses.get(i).move();
+        }
+    }
+
+    public void print() {
+        for (int i = 0; i < horses.size(); i++) {
+            horses.get(i).print();
+        }
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+    }
 }
