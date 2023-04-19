@@ -35,9 +35,17 @@ public class Horse {
         this.distance = distance;
     }
 
+    //В методе move класса Horse значение поля distance должно увеличиваться на расстояние
+    // пройденное за один "ход"(значение поля speed) умноженное на случайное число от нуля до
+    // единицы полученное с помощью вызова метод Math.random().
     public void move() {
+        distance += speed * Math.random();
     }
 
     public void print() {
+        for (int i = 0; i < Math.floor(distance); i++) {
+            System.out.print(".");
+        }
+        System.out.println(name);
     }
 }
